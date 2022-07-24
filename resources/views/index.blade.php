@@ -40,11 +40,12 @@
    
      <form action="/edit/{{ $todo->id }}"
            style="display: inline;" 
-           method="POST">
-           
-       @csrf
-  
-         <input type="text" class="input-update" name="id" value="{{$todo->id}}">
+           method="POST">        
+         <input type="text" class="input-update" name="id" value="{{$todo->text}}">
+              @csrf
+
+
+              
        <button class="button-update">更新</button>
      </form>
    
