@@ -7,8 +7,8 @@ Route::get('/', [TodoController::class, 'index']);
 Route::get('/todos', [TodoController::class, 'index']);
 
 
-Route::get('/edit', [TodoController::class, 'edit']);
-Route::post('/edit', [TodoController::class, 'update']);
+Route::get('/edit', [TodoController::class, 'editTodo']);
+Route::post('/edit/{id}', [TodoController::class, 'updateTodo']);
 
 
 Route::post('/todos', [TodoController::class, 'addTodo']);
