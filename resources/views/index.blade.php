@@ -38,10 +38,8 @@
      
    <div class="time"> {{ $todo->created_at }}</td>
    
-     <form action="/edit/{{ $todo->id }}"
-           style="display: inline;" 
-           method="POST">        
-         <input type="text" class="input-update" name="id" value="{{$todo->text}}">
+     <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">        
+         <input type="text" class="input-update" name="text" value="{{$todo->text}}">
               @csrf
 
 

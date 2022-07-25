@@ -24,7 +24,7 @@ class TodoController extends Controller
 
 
 
-  public function editTodo(Request $request)
+ public function editTodo(Request $request)
     {
         $todo = Todo::find($request->id);
         return view('edit', ['todos' => $todo]);
@@ -33,7 +33,7 @@ class TodoController extends Controller
     {
         $todos = $request->all();
         unset($todos['_token']);
-        Todo::where('id', $request->text)->update($todos);
+        Todo::where('id', $request->id)->update($todos);
         return redirect('/');
     }
 
