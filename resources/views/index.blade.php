@@ -25,21 +25,23 @@
             <th>更新</th>
             <th>削除</th>
           </tr>
-      <tr>
+          @foreach ($todos as $todo)
+    <tr>
+        
       <td>
-         @foreach ($todos as $todo)  
+         
         {{ $todo->created_at }}
       </td>
+      
        <td>
          <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">    
          <input type="text" class="input-update" name="text" value="{{$todo->text}}">
               @csrf
        </td>
        <td>
-        
          <button class="button-update">更新</button>
          </form>   
-</td>
+　　　　</td>
          
          @endforeach
           <td>
@@ -52,6 +54,9 @@
             @endforeach
           </td>
       </tr>
+
+
+
    </table>  
  </tbody>
  </div>
