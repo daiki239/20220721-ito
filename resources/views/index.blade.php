@@ -31,12 +31,14 @@
         {{ $todo->created_at }}
       </td>
        <td>
+         <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">    
          <input type="text" class="input-update" name="text" value="{{$todo->text}}">
               @csrf
        </td>
        <td>
-        <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">     </form>   
+        
          <button class="button-update">更新</button>
+         </form>   
 </td>
          
          @endforeach
