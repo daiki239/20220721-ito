@@ -20,6 +20,13 @@ td
   background: transparent;
 }
 
+th{text-align: center;}
+
+td{display: table-cell;
+  text-align: middle;
+
+}
+
  .flex {
    display: flex;
  }
@@ -66,6 +73,7 @@ h3{margin-bottom: 15px;
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  text-align: center;
 }
 
 tr {
@@ -91,6 +99,8 @@ table {
   text-align: center;
   width: 100%
 }
+
+
 
 tr {
   height: 50px;
