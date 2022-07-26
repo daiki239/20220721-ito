@@ -16,41 +16,42 @@
    <button class="button-add">追加</button>
  </form>
 
-<tbody>
+
   <table>   
-<tr>
+    <tbody>
+          <tr>
             <th>作成日</th>
             <th>タスク名</th>
             <th>更新</th>
             <th>削除</th>
           </tr>
-    </table>  
-<div class=table2>
-<td>
-  @foreach ($todos as $todo)
-   <div class="time"> {{ $todo->created_at }}</td>
-     <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">        
+      <tr>
+      <td>
+         @foreach ($todos as $todo)  
+        {{ $todo->created_at }}
+      </td>
+       <td>
          <input type="text" class="input-update" name="text" value="{{$todo->text}}">
               @csrf
-       <button class="button-update">更新</button>
-     </form>
-   @endforeach
+       </td>
+       <td>
+        <form action="/edit/{{ $todo->id }}" style="display: inline;" method="POST">     </form>   
+         <button class="button-update">更新</button>
 </td>
-<td>
-   @foreach ($todos as $todo)  
-     <form action="/todos/{{ $todo->id }}"
-           style="display: inline;" 
-           method="POST">
-       @csrf
-       @method('DELETE')
-       <button class="button-delete">削除</button>
-     </form>
-   @endforeach
-</td>
-</div>
-</tbody>
-   
-</div>
+         
+         @endforeach
+          <td>
+             @foreach ($todos as $todo)  
+             <form action="/todos/{{ $todo->id }}"style="display: inline;" method="POST">
+             @csrf
+             @method('DELETE')
+            <button class="button-delete">削除</button>
+            </form>
+            @endforeach
+          </td>
+      </tr>
+   </table>  
+ </tbody>
  </div>
  </div>
 </body>

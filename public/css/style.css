@@ -23,7 +23,7 @@ td
 th{text-align: center;}
 
 td{display: table-cell;
-  text-align: middle;
+  text-align: center;
 
 }
 
@@ -78,6 +78,7 @@ table {
 
 tr {
   height: 50px;
+  text-align: center;
 }
 
 .title {
@@ -102,9 +103,6 @@ table {
 
 
 
-tr {
-  height: 50px;
-}
 
 .time{
 font-size: 15px;
