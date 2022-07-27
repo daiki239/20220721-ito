@@ -43,9 +43,9 @@
          </form>   
 　　　　</td>
          
-         @endforeach
+        
           <td>
-             @foreach ($todos as $todo)  
+            
              <form action="/todos/{{ $todo->id }}"style="display: inline;" method="POST">
              @csrf
              @method('DELETE')
@@ -54,10 +54,8 @@
             @endforeach
           </td>
       </tr>
-
-
-
-   </table>  
+   </table>
+     
  </tbody>
  </div>
  </div>
